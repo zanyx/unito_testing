@@ -63,7 +63,6 @@ class CompanyFragment : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment CompanyFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() = CompanyFragment()
     }

@@ -98,7 +98,6 @@ class WelcomeFragment : Fragment(), View.OnClickListener {
          * @param username username inserted in login page.
          * @return A new instance of fragment SecondPageFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(username: String) =
             WelcomeFragment().apply {

@@ -89,7 +89,6 @@ class MainSectionFragment : Fragment(), View.OnClickListener {
          * this fragment using the provided parameters.
          * @return A new instance of fragment MainSectionFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() = MainSectionFragment()
     }
