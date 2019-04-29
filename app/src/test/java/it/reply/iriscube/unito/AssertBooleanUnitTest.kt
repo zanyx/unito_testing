@@ -7,17 +7,12 @@ class AssertBooleanUnitTest {
 
     fun isEvenNumber(number: Int): Boolean {
 
-        var result = false
-        if (number % 2 == 0) {
-            result = true
-        }
-        return result
+        return true
     }
 
     @Test
     fun evenNumberTest() {
-        val abut = AssertBooleanUnitTest()
-        assertFalse(abut.isEvenNumber(3))
+
     }
 
     @Test
