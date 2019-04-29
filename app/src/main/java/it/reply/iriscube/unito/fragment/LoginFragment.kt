@@ -23,11 +23,13 @@ import kotlinx.android.synthetic.main.login_fragment.*
 class LoginFragment : Fragment(), View.OnFocusChangeListener {
 
     private var listener: OnFirstPageFragmentInteractionListener? = null
-
     private lateinit var mRootView: View
+    private var errorIsVisible = false
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         mRootView = inflater.inflate(R.layout.login_fragment, container, false)
         return mRootView
@@ -47,7 +49,22 @@ class LoginFragment : Fragment(), View.OnFocusChangeListener {
         userNameTextView.onFocusChangeListener = this
         passwordTextView.onFocusChangeListener = this
         loginButton.setOnClickListener {
-            listener?.onLoginButtonPressed(userNameTextView.text.toString())
+            errorIsVisible = false
+            if (userNameTextView.text.isEmpty()) {
+                userNameErrorView.visibility = View.VISIBLE
+                errorIsVisible = true
+            } else {
+                userNameErrorView.visibility = View.GONE
+            }
+            if (passwordTextView.text.isEmpty()) {
+                passwordErrorView.visibility = View.VISIBLE
+                errorIsVisible = true
+            } else {
+                passwordErrorView.visibility = View.GONE
+            }
+            if (!errorIsVisible) {
+                listener?.onLoginButtonPressed(userNameTextView.text.toString())
+            }
         }
     }
 
@@ -96,6 +113,6 @@ class LoginFragment : Fragment(), View.OnFocusChangeListener {
          */
         @JvmStatic
         fun newInstance() =
-                LoginFragment()
+            LoginFragment()
     }
 }

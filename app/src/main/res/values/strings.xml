@@ -24,5 +24,7 @@
     </string>
     <string name="update_pagina_in_corso">Update pagina in corso...</string>
     <string name="section_not_available">Sezione non disponibile</string>
+    <string name="insert_user_name">* Inserisci username</string>
+    <string name="insert_email">* Inserisci la password</string>
 
 </resources>
