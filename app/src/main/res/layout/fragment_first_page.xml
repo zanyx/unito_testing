@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/firstPageFragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragment.FirstPageFragment">
+
+    <FrameLayout
+        android:id="@+id/reloadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC424242"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/update_pagina_in_corso"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/companyIcon"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/logo_login"
+        android:src="@drawable/iriscube_reply"
+        app:layout_constraintBottom_toTopOf="@id/companyIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/userNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:inputType="none"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:tag="userNameLabel"
+        android:text="@string/username"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/userNameTextView"
+        app:layout_constraintEnd_toEndOf="@id/userNameTextView"
+        app:layout_constraintStart_toStartOf="@id/userNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/companyIcon"
+        />
+
+    <EditText
+        android:id="@+id/userNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_corner_shape"
+        android:backgroundTint="@color/iriscube_main_color"
+        android:hint="@string/inserisci_username_o_email"
+        android:inputType="text"
+        android:labelFor="@id/userNameLabel"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColorHint="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameLabel"/>
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:inputType="none"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:tag="passwordLabel"
+        android:text="@string/password"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/passwordTextView"
+        app:layout_constraintEnd_toEndOf="@id/passwordTextView"
+        app:layout_constraintStart_toStartOf="@id/passwordTextView"
+        app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+        />
+
+    <EditText
+        android:id="@+id/passwordTextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_corner_shape"
+        android:backgroundTint="@color/iriscube_main_color"
+        android:hint="@string/inserisci_password"
+        android:inputType="textPassword"
+        android:labelFor="@id/userNameLabel"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColorHint="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabel"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_corner_shape"
+        android:backgroundTint="@color/iriscube_main_color"
+        android:text="@string/entra"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/userNameTextView"
+        app:layout_constraintStart_toStartOf="@id/userNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/passwordTextView"/>
+
+    <TextView
+        android:id="@+id/noAccountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/no_account_label"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/registrationLink"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/registrationLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/registrati"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/noAccountLabel"/>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Android Testing</string>
+    <string name="app_name">EspressoBasics</string>
+    <string name="iriscube_reply">Iriscube Reply</string>
+    <string name="username">Username</string>
+    <string name="inserisci_username_o_email">Inserisci username o email</string>
+    <string name="logo_login">Logo login</string>
+    <string name="password">Password</string>
+    <string name="inserisci_password">Inserisci password</string>
+    <string name="entra">Entra</string>
+    <string name="no_account_label">Non hai un account?</string>
+    <string name="registrati">Registrati</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="company_base_description">IRISCUBE è una società del gruppo Reply S.P.A. focalizzata su consulenza e sviluppo multicanale di soluzioni innovative web e mobile per il mercato Finance. \nSiamo più di 100 professionisti. Lavoriamo in team strutturati, curiamo la relazione con i clienti, disegniamo soluzioni e architetture, seguiamo i progetti dal concept al rilascio. \n\nLa rivoluzione del fintech è già in atto ed il trend di crescita non accenna ad arrestarsi. \n\nPer il mondo bancario e assicurativo sviluppiamo portali informativi, internet e mobile banking, applicazioni native e ibride di supporto ai promotori finanziari, social digital wallet, sistemi intelligenti per contact center, piattaforme di wealth management, sistemi di biometria digitale, machine learning, ecc. \n\nIl particolare mercato molto attivo e capace di investimenti, fa sì che la società sia in fortissimo sviluppo consentendo percorsi di carriera rapidi e stimolanti per tutti quelli che desiderano mettersi in gioco.</string>
+    <string name="update_pagina_in_corso">Update pagina in corso...</string>
+    <string name="section_not_available">Sezione non disponibile</string>
+
 </resources>

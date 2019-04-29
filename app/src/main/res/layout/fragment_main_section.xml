@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragment.MainSectionFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/companyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/logo_login"
+            android:src="@drawable/iriscube_reply"
+            app:layout_constraintBottom_toTopOf="@id/companyIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/profileContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/iriscube_main_color"
+            app:layout_constraintBottom_toBottomOf="@id/profileTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyIcon">
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/profileIcn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="6dp"
+            android:src="@drawable/ic_outline_person"
+            app:layout_constraintEnd_toEndOf="@id/profileContainer"
+            app:layout_constraintStart_toStartOf="@id/profileContainer"
+            app:layout_constraintTop_toTopOf="@id/profileContainer"/>
+
+        <TextView
+            android:id="@+id/profileTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="6dp"
+            android:text="Il mio profilo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/profileContainer"
+            app:layout_constraintStart_toStartOf="@id/profileContainer"
+            app:layout_constraintTop_toBottomOf="@id/profileIcn"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/companyContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/iriscube_main_color"
+            app:layout_constraintBottom_toBottomOf="@id/companyTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileContainer">
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/companyIcn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="6dp"
+            android:src="@drawable/ic_outline_business"
+            app:layout_constraintEnd_toEndOf="@id/companyContainer"
+            app:layout_constraintStart_toStartOf="@id/companyContainer"
+            app:layout_constraintTop_toTopOf="@id/companyContainer"/>
+
+        <TextView
+            android:id="@+id/companyTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="6dp"
+            android:text="La mia azienda"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/companyContainer"
+            app:layout_constraintStart_toStartOf="@id/profileContainer"
+            app:layout_constraintTop_toBottomOf="@id/companyIcn"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/addressbookContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/iriscube_main_color"
+            app:layout_constraintBottom_toBottomOf="@id/addressbookTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyContainer">
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/addressbookIcn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="6dp"
+            android:src="@drawable/ic_baseline_contacts"
+            app:layout_constraintEnd_toEndOf="@id/addressbookContainer"
+            app:layout_constraintStart_toStartOf="@id/addressbookContainer"
+            app:layout_constraintTop_toTopOf="@id/addressbookContainer"/>
+
+        <TextView
+            android:id="@+id/addressbookTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="6dp"
+            android:text="La mia rubrica"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/addressbookContainer"
+            app:layout_constraintStart_toStartOf="@id/profileContainer"
+            app:layout_constraintTop_toBottomOf="@id/addressbookIcn"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressbookContainer"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
