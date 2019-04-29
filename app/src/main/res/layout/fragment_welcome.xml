@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".fragment.SecondPageFragment">
+
+    <ImageView
+            android:id="@+id/companyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/logo_login"
+            android:src="@drawable/iriscube_reply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/welcomeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Benvenuto"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyIcon"/>
+
+    <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Marco"
+            android:textAlignment="center"
+            android:textColor="@color/iriscube_main_color"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/welcomeTxt"
+            app:layout_constraintStart_toStartOf="@id/welcomeTxt"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTxt"/>
+
+    <TextView
+            android:id="@+id/descriptionTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Questa app ti permette di tenere sotto controllo le tue attività lavorative quotidiane"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/nameTxt"/>
+
+    <ImageView
+            android:id="@+id/logoutIcn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_outline_exit_to_app"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/nextIcn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTxt"
+    />
+
+    <TextView
+            android:id="@+id/logoutTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@id/logoutIcn"
+            app:layout_constraintStart_toStartOf="@id/logoutIcn"
+            app:layout_constraintTop_toBottomOf="@id/logoutIcn"/>
+
+    <ImageView
+            android:id="@+id/nextIcn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_outline_skip_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/logoutIcn"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTxt"
+    />
+
+    <TextView
+            android:id="@+id/nextTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Successivo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@id/nextIcn"
+            app:layout_constraintStart_toStartOf="@id/nextIcn"
+            app:layout_constraintTop_toBottomOf="@id/nextIcn"/>
+
+</android.support.constraint.ConstraintLayout>

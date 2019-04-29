@@ -7,25 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import it.reply.iriscube.unito.R
-import kotlinx.android.synthetic.main.fragment_second_page.*
+import kotlinx.android.synthetic.main.fragment_welcome.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_USERNAME = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_USERNAME = "auser"
 
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [SecondPageFragment.OnFragmentInteractionListener] interface
+ * [WelcomeFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [SecondPageFragment.newInstance] factory method to
+ * Use the [WelcomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class SecondPageFragment : Fragment(), View.OnClickListener {
+class WelcomeFragment : Fragment(), View.OnClickListener {
     private var mUserName: String? = null
-    private var listener: OnSecondPageFragmentInteractionListener? = null
+    private var listener: OnWelcomeFragmentListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +34,7 @@ class SecondPageFragment : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second_page, container, false)
+        return inflater.inflate(R.layout.fragment_welcome, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,10 +48,10 @@ class SecondPageFragment : Fragment(), View.OnClickListener {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnSecondPageFragmentInteractionListener) {
+        if (context is OnWelcomeFragmentListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnSecondPageFragmentInteractionListener")
+            throw RuntimeException(context.toString() + " must implement OnWelcomeFragmentListener")
         }
     }
 
@@ -67,7 +64,7 @@ class SecondPageFragment : Fragment(), View.OnClickListener {
         when (v.id) {
             R.id.logoutIcn,
             R.id.logoutTxt -> {
-                listener?.removeFragment(TAG)
+                listener?.logout()
             }
             R.id.nextTxt,
             R.id.nextIcn -> {
@@ -87,13 +84,13 @@ class SecondPageFragment : Fragment(), View.OnClickListener {
      * (http://developer.android.com/training/basics/fragments/communicating.html)
      * for more information.
      */
-    interface OnSecondPageFragmentInteractionListener {
-        fun removeFragment(tag: String)
+    interface OnWelcomeFragmentListener {
+        fun logout()
         fun goToMainSection()
     }
 
     companion object {
-        const val TAG = "SecondPageFragment"
+        const val TAG = "WelcomeFragment"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
@@ -104,10 +101,10 @@ class SecondPageFragment : Fragment(), View.OnClickListener {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(username: String) =
-                SecondPageFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_USERNAME, username)
-                    }
+            WelcomeFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_USERNAME, username)
                 }
+            }
     }
 }

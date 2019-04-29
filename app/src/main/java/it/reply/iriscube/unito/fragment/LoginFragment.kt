@@ -8,19 +8,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import it.reply.iriscube.unito.R
-import kotlinx.android.synthetic.main.fragment_first_page.*
+import kotlinx.android.synthetic.main.login_fragment.*
 
 
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [FirstPageFragment.OnFragmentInteractionListener] interface
+ * [LoginFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [FirstPageFragment.newInstance] factory method to
+ * Use the [LoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class FirstPageFragment : Fragment(), View.OnFocusChangeListener {
+class LoginFragment : Fragment(), View.OnFocusChangeListener {
 
     private var listener: OnFirstPageFragmentInteractionListener? = null
 
@@ -29,7 +29,7 @@ class FirstPageFragment : Fragment(), View.OnFocusChangeListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        mRootView = inflater.inflate(R.layout.fragment_first_page, container, false)
+        mRootView = inflater.inflate(R.layout.login_fragment, container, false)
         return mRootView
     }
 
@@ -87,15 +87,15 @@ class FirstPageFragment : Fragment(), View.OnFocusChangeListener {
     }
 
     companion object {
-        const val TAG = "FirstPageFragment"
+        const val TAG = "LoginFragment"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
 
-         * @return A new instance of fragment FirstPageFragment.
+         * @return A new instance of fragment LoginFragment.
          */
         @JvmStatic
         fun newInstance() =
-                FirstPageFragment()
+                LoginFragment()
     }
 }
