@@ -14,11 +14,11 @@ class MockitoMockAnnotationExample {
 
     @Before
     fun setUp() {
-        TODO("Initialize the @Mock annotated fields")
+        // TODO: Initialize the @Mock annotated fields
     }
 
     @Test
     fun test_listContains() {
-        TODO("Test that the initialized list contains the element 'Unito' using mocking APIs.")
+        // TODO: Test that the initialized list contains the element 'Unito' using mocking APIs.
     }
 }
