@@ -146,6 +146,20 @@
             app:layout_constraintTop_toBottomOf="@id/passwordTextView"
             app:layout_constraintEnd_toEndOf="@id/passwordTextView"/>
 
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/wrongCredential"
+            android:text="@string/wrong_credential"
+            android:textColor="#FF0000"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            tools:visibility="visible"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/passwordTextView"
+            app:layout_constraintTop_toBottomOf="@id/passwordErrorView"
+            app:layout_constraintEnd_toEndOf="@id/passwordTextView"/>
+
     <Button
             android:id="@+id/loginButton"
             android:layout_width="0dp"
@@ -157,7 +171,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@id/userNameTextView"
             app:layout_constraintStart_toStartOf="@id/userNameTextView"
-            app:layout_constraintTop_toBottomOf="@id/passwordTextView"/>
+            app:layout_constraintTop_toBottomOf="@id/wrongCredential"/>
 
     <TextView
             android:id="@+id/noAccountLabel"

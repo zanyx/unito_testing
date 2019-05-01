@@ -62,6 +62,12 @@ class LoginFragment : Fragment(), View.OnFocusChangeListener {
             } else {
                 passwordErrorView.visibility = View.GONE
             }
+            if (!errorIsVisible && userNameTextView.text.toString() == "username" && passwordTextView.text.toString() == "password") {
+                wrongCredential.visibility = View.VISIBLE
+                errorIsVisible = true
+            } else {
+                wrongCredential.visibility = View.GONE
+            }
             if (!errorIsVisible) {
                 listener?.onLoginButtonPressed(userNameTextView.text.toString())
             }

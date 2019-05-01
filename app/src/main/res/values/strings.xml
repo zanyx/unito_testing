@@ -26,5 +26,6 @@
     <string name="section_not_available">Sezione non disponibile</string>
     <string name="insert_user_name">* Inserisci username</string>
     <string name="insert_email">* Inserisci la password</string>
+    <string name="wrong_credential">Username o password errati, si prega di riprovare</string>
 
 </resources>
