@@ -20,11 +20,6 @@ class LoginActivityTest {
     }
 
     @Test
-    fun usernameInputShouldApplyCorrectHint() {
-        //TODO: Check that username TextView hint is exactly "Inserisci username o email"
-    }
-
-    @Test
     fun shouldContainPasswordInput() {
         //TODO: Check that password TextView is visible
     }
