@@ -1,12 +1,7 @@
 package it.reply.iriscube.unito
 
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.action.ViewActions.*
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import it.reply.iriscube.unito.activity.LoginActivity
-import org.hamcrest.Matchers.not
 import org.junit.Rule
 import org.junit.Test
 
@@ -21,82 +16,70 @@ class LoginActivityTest {
 
     @Test
     fun shouldContainUsernameInput() {
-        onView(withId(R.id.userNameTextView)).check(matches(isDisplayed()))
+        //TODO: Check that username TextView is visible
     }
 
     @Test
     fun usernameInputShouldApplyCorrectHint() {
-        onView(withId(R.id.userNameTextView)).check(matches(withHint(R.string.inserisci_username_o_email)))
+        //TODO: Check that username TextView hint is exactly "Inserisci username o email"
     }
 
     @Test
     fun shouldContainPasswordInput() {
-        onView(withId(R.id.passwordTextView)).check(matches(isDisplayed()))
+        //TODO: Check that password TextView is visible
     }
 
 
     @Test
     fun passwordInputShouldApplyCorrectHint() {
-        onView(withId(R.id.passwordTextView)).check(matches(withHint(R.string.inserisci_password)))
+        //TODO: Check that password TextView hint is exactly "Inserisci password"
     }
 
     @Test
     fun shouldContainLoginButton() {
-        onView(withId(R.id.loginButton)).check(matches(isDisplayed()))
+        //TODO: Check that login Button is visible
+        // Find the button by id
     }
 
     @Test
     fun shouldContainLoginButtonFindByText() {
-        onView(withText(R.string.entra)).check(matches(isDisplayed()))
+        //TODO: Check that login Button is visible
+        // Find the button by text
     }
 
     @Test
     fun loginButtonShouldApplyCorrectText() {
-        onView(withId(R.id.loginButton)).check(matches(withText(R.string.entra)))
+        //TODO: Check that login Button text is exactly "Entra"
     }
 
     @Test
     fun loginWithoutUsernameShouldDisplayError() {
-        onView(withId(R.id.userNameTextView)).perform(typeText(""), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.userNameErrorView)).check(matches(isDisplayed()))
+        //TODO: Check that the username message error is visibile when username is empty
     }
 
     @Test
     fun loginWithUsernameShouldntDisplayError() {
-        onView(withId(R.id.userNameTextView)).perform(typeText("username"), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.userNameErrorView)).check(matches(not(isDisplayed())))
+        //TODO: Check that the username message error is hidden when username is not empty
     }
 
     @Test
     fun loginWithEmptyPasswordShouldDisplayError() {
-        onView(withId(R.id.passwordTextView)).perform(typeText(""), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.passwordErrorView)).check(matches(isDisplayed()))
+        //TODO: Check that the password message error is visibile when password is empty
     }
 
     @Test
     fun loginWithPasswordShouldntDisplayError() {
-        onView(withId(R.id.userNameTextView)).perform(typeText(""), closeSoftKeyboard())
-        onView(withId(R.id.passwordTextView)).perform(typeText("password"), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.passwordTextView)).check(matches(not(isDisplayed())))
+        //TODO: Check that the password message error is hidden when pasword is not empty
     }
 
 
     @Test
     fun loginWithIncorrectCredentialsShouldDisplayError() {
-        onView(withId(R.id.userNameTextView)).perform(typeText("username"), closeSoftKeyboard())
-        onView(withId(R.id.passwordTextView)).perform(typeText("password"), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.passwordErrorView)).check(matches(isDisplayed()))
+        //TODO: Check that the wrong credentials error is visible when username equals to "username" and password equals to "password"
     }
 
     @Test
     fun successfulLoginShouldOpenMainScreen() {
-        onView(withId(R.id.userNameTextView)).perform(typeText("Marco"), closeSoftKeyboard())
-        onView(withId(R.id.passwordTextView)).perform(typeText("123456789"), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
+        //TODO: Check that the login is successful
     }
 }
