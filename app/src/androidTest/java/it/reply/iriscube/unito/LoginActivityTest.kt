@@ -25,11 +25,6 @@ class LoginActivityTest {
     }
 
     @Test
-    fun usernameInputShouldApplyCorrectHint() {
-        onView(withId(R.id.userNameTextView)).check(matches(withHint(R.string.inserisci_username_o_email)))
-    }
-
-    @Test
     fun shouldContainPasswordInput() {
         onView(withId(R.id.passwordTextView)).check(matches(isDisplayed()))
     }
@@ -64,7 +59,7 @@ class LoginActivityTest {
 
     @Test
     fun loginWithUsernameShouldntDisplayError() {
-        onView(withId(R.id.userNameTextView)).perform(typeText("username"), closeSoftKeyboard())
+        onView(withId(R.id.userNameTextView)).perform(typeText("Marco"), closeSoftKeyboard())
         onView(withId(R.id.loginButton)).perform(click())
         onView(withId(R.id.userNameErrorView)).check(matches(not(isDisplayed())))
     }
@@ -79,9 +74,9 @@ class LoginActivityTest {
     @Test
     fun loginWithPasswordShouldntDisplayError() {
         onView(withId(R.id.userNameTextView)).perform(typeText(""), closeSoftKeyboard())
-        onView(withId(R.id.passwordTextView)).perform(typeText("password"), closeSoftKeyboard())
+        onView(withId(R.id.passwordTextView)).perform(typeText("123456789"), closeSoftKeyboard())
         onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.passwordTextView)).check(matches(not(isDisplayed())))
+        onView(withId(R.id.passwordErrorView)).check(matches(not(isDisplayed())))
     }
 
 
@@ -90,7 +85,7 @@ class LoginActivityTest {
         onView(withId(R.id.userNameTextView)).perform(typeText("username"), closeSoftKeyboard())
         onView(withId(R.id.passwordTextView)).perform(typeText("password"), closeSoftKeyboard())
         onView(withId(R.id.loginButton)).perform(click())
-        onView(withId(R.id.passwordErrorView)).check(matches(isDisplayed()))
+        onView(withId(R.id.wrongCredential)).check(matches(isDisplayed()))
     }
 
     @Test
