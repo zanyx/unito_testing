@@ -7,13 +7,15 @@ import org.junit.Test
 
 class ArrayEqualityUnitTest {
 
-    var expectedEmps = arrayOfNulls<Any>(3)
+    private lateinit var expectedEmps: Array<Employee>
 
     @Before
     fun initInputs() {
-        expectedEmps[0] = Employee(1, "Yoda", 15000)
-        expectedEmps[1] = Employee(2, "Luke",  25000)
-        expectedEmps[2] = Employee(3, "Anakin", 5000)
+        expectedEmps = arrayOf(
+            Employee(1, "Yoda", 15000),
+            Employee(2, "Luke", 25000),
+            Employee(3, "Anakin", 5000)
+        )
     }
 
     @Test
