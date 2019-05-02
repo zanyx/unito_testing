@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="iriscube_main_color">#CDAE6B</color>
+    <!--<color name="colorPrimary">@color/iriscube_main_color</color>-->
+    <!--<color name="colorPrimaryDark">#9A7F3E</color>-->
+    <!--<color name="colorAccent">#6FFFA8</color>-->
+
+    <color name="colorPrimary">#004149</color>
+    <color name="colorPrimaryDark">#001b21</color>
+    <color name="colorAccent">#cdae6b</color>
+    <color name="secondaryLightColor">#ffe09a</color>
+    <color name="secondaryDarkColor">#9a7f3e</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <color name="iriscube_main_color">@color/colorAccent</color>
 </resources>

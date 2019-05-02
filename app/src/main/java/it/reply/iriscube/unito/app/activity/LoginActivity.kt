@@ -1,10 +1,10 @@
-package it.reply.iriscube.unito.activity
+package it.reply.iriscube.unito.app.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import it.reply.iriscube.unito.R
-import it.reply.iriscube.unito.fragment.LoginFragment
+import it.reply.iriscube.unito.app.fragment.LoginFragment
 
 
 class LoginActivity : AppCompatActivity(), LoginFragment.OnFirstPageFragmentInteractionListener {

@@ -1,9 +1,9 @@
-package it.reply.iriscube.unito.activity
+package it.reply.iriscube.unito.app.activity
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import it.reply.iriscube.unito.R
-import it.reply.iriscube.unito.fragment.CompanyFragment
+import it.reply.iriscube.unito.app.fragment.CompanyFragment
 
 class CompanyActivity : AppCompatActivity(), CompanyFragment.OnCompanyFragmentInteractionListener {
 

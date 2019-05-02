@@ -1,4 +1,4 @@
-package it.reply.iriscube.unito.fragment
+package it.reply.iriscube.unito.app.fragment
 
 import android.content.Context
 import android.os.Bundle

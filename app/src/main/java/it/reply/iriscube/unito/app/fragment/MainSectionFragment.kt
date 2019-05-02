@@ -1,4 +1,4 @@
-package it.reply.iriscube.unito.fragment
+package it.reply.iriscube.unito.app.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -22,8 +22,10 @@ import kotlinx.android.synthetic.main.fragment_main_section.*
 class MainSectionFragment : Fragment(), View.OnClickListener {
     private var listener: OnMainSectionFragmentInteractionListener? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main_section, container, false)
     }
@@ -33,7 +35,7 @@ class MainSectionFragment : Fragment(), View.OnClickListener {
         if (context is OnMainSectionFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnMainSectionFragmentInteractionListener")
+            throw RuntimeException("${context::class.java.name} must implement OnMainSectionFragmentInteractionListener")
         }
     }
 

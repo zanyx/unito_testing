@@ -3,6 +3,13 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="it.reply.iriscube.unito">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--
+    Allows Glide to monitor connectivity status and restart failed requests if users go from a
+    a disconnected to a connected network state.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
             android:allowBackup="false"
             android:icon="@mipmap/ic_launcher"
@@ -11,20 +18,23 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.CompanyActivity">
-        </activity>
-        <activity android:name=".activity.ProfileActivity">
-        </activity>
-        <activity android:name=".activity.MainSectionActivity">
-        </activity>
-        <activity android:name=".activity.LoginActivity">
+
+        <activity android:name="it.reply.iriscube.unito.app.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.WelcomeActivity"/>
+        <activity android:name="it.reply.iriscube.unito.app.activity.WelcomeActivity"/>
+        <activity android:name="it.reply.iriscube.unito.app.activity.MainSectionActivity"/>
+        <activity android:name="it.reply.iriscube.unito.app.activity.CompanyActivity"
+                  android:label="@string/my_company"/>
+        <activity android:name="it.reply.iriscube.unito.app.activity.ProfileActivity"
+                  android:label="@string/my_profile"/>
+        <activity android:name="it.reply.iriscube.unito.app.activity.AddressBookActivity"
+                  android:label="@string/my_address_book"/>
+        <activity android:name=".app.activity.PersonDetailActivity"/>
     </application>
 
 </manifest>

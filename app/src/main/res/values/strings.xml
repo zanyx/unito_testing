@@ -27,5 +27,9 @@
     <string name="insert_user_name">* Inserisci username</string>
     <string name="insert_email">* Inserisci la password</string>
     <string name="wrong_credential">Username o password errati, si prega di riprovare</string>
+    <string name="avatar_image_content_description">The avatar image of the user</string>
+    <string name="my_address_book">La mia rubrica</string>
+    <string name="my_profile">Il mio profilo</string>
+    <string name="my_company">La mia azienda</string>
 
 </resources>
