@@ -12,7 +12,7 @@ class PersonDetailActivity : AppCompatActivity() {
 
     companion object {
 
-        private const val PERSON_ID_EXTRA = "person_id"
+        const val PERSON_ID_EXTRA = "person_id"
 
         fun newIntent(context: Context, person: Person): Intent =
             Intent(context, PersonDetailActivity::class.java).apply {
